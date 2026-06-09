@@ -22,6 +22,18 @@ DARIO       |       50%
 
 // COMPLETAR: Implementar la función calcularTotal que reciba el id del artista, la cantidad de entradas y un código de descuento (opcional) y devuelva el precio total a pagar en patacones.
 
+function calcularTotal(id:string, cant:number, codigo:string):number{
+let preciobase:number;
+
+if (id==="mugre"){ preciobase = 150}
+else if (id==="marilina"){ preciobase=200}
+else if (id==="dillom"){ preciobase=350}
+else if (id==="viagra"){ preciobase=400}
+else if (id==="magdalena"){ preciobase=600}
+else if (id==="lali"){ preciobase=500}
+}
+
+
 cuandoPasa('seleccionarArtista', ({ id, cantidad, codigoDescuento }) => {
   let cantidadNum: number = Number(cantidad);
   let precio: number = calcularTotal(id, cantidadNum, codigoDescuento);
