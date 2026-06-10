@@ -1,3 +1,4 @@
+import { start } from 'repl';
 import { cuandoPasa, enviarAlFrontend, iniciar } from './lib/ui.ts';
 
 /* Precios de los artistas en patacones 
@@ -31,6 +32,29 @@ else if (id==="dillom"){ preciobase=350}
 else if (id==="viagra"){ preciobase=400}
 else if (id==="magdalena"){ preciobase=600}
 else if (id==="lali"){ preciobase=500}
+else if (id==="kgatlw"){ preciobase=700}
+else if (id==="sabrina"){ preciobase=1000}
+else {preciobase=0}
+
+let preciodesc:number;
+if (codigo==="TIC10"){
+  preciodesc=preciobase*0.9
+}
+else if (codigo==="TIC20"){
+  preciodesc=preciobase*0.8
+}
+else if (codigo==="DARIO"){
+  preciodesc=preciobase*0.5
+}
+else {
+  preciodesc = preciobase;
+}
+
+let precioTotal:number;
+precioTotal = preciodesc * cant;
+
+return precioTotal;
+
 }
 
 
